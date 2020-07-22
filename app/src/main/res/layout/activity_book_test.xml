@@ -68,12 +68,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="773dp"
+        android:layout_height="695dp"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="695dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
@@ -81,7 +81,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Book Test" />
+                android:text="Book Test"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
         </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="525dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
     </LinearLayout>
 </RelativeLayout>

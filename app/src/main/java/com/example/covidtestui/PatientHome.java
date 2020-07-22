@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class PatientHome extends AppCompatActivity {
-    Button buttonHome, buttonBookTest, buttonTestResults, buttonSymptoms, buttonMore;
+    Button buttonHome, buttonBookTest, buttonTestResults, buttonSymptoms, buttonMore, buttonBookNowHome, buttonViewResultsHome, buttonLogSymptomsHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,9 @@ public class PatientHome extends AppCompatActivity {
         buttonTestResults = (Button) findViewById(R.id.buttonTestResults);
         buttonSymptoms = (Button) findViewById(R.id.buttonSymptoms);
         buttonMore = (Button) findViewById(R.id.buttonMore);
+        buttonBookNowHome = (Button) findViewById(R.id.buttonBookNowHome);
+        buttonViewResultsHome = (Button) findViewById(R.id.buttonViewResultsHome);
+        buttonLogSymptomsHome = (Button) findViewById(R.id.buttonLogSymptomsHome);
 
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +56,27 @@ public class PatientHome extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openPatientMore();
+            }
+        });
+
+        buttonBookNowHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openBookTest();
+            }
+        });
+
+        buttonViewResultsHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openTestResults();
+            }
+        });
+
+        buttonLogSymptomsHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSymptomLog();
             }
         });
     }
