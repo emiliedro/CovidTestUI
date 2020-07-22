@@ -16,9 +16,7 @@
         <activity android:name=".PatientHome" />
         <activity android:name=".PatientLogin" />
         <activity android:name=".DoctorLogin" />
-        <activity
-            android:name=".ui.login.DoctorLoginActivity"
-            android:label="@string/title_activity_doctor_login" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
