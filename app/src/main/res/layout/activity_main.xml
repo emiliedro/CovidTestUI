@@ -8,62 +8,69 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="610dp"
         android:text="Welcome"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
 
-    <Button
-        android:id="@+id/buttonDoctorSI"
-        android:layout_width="255dp"
-        android:layout_height="113dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="308dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
-        android:layout_marginBottom="308dp"
-        android:text="Doctor"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
-
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView6"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="218dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="316dp"
+        android:layout_marginBottom="488dp"
         android:text="Sign in as:"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
 
-    <Button
-        android:id="@+id/buttonPatientSI"
-        android:layout_width="255dp"
-        android:layout_height="113dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="458dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="443dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
-        android:layout_marginBottom="173dp"
-        android:text="Patient"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+        android:layout_marginTop="406dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonDoctorSI"
+                android:layout_width="255dp"
+                android:layout_height="113dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="75dp"
+                android:text="Doctor"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonPatientSI"
+                android:layout_width="255dp"
+                android:layout_height="113dp"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="false"
+                android:layout_marginStart="83dp"
+                android:layout_marginEnd="72dp"
+                android:text="Patient"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+        </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>
