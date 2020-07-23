@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CovidTestForm"></activity>
+        <activity android:name=".SymptomForm"></activity>
+        <activity android:name=".CovidTestForm" />
         <activity android:name=".AntibodyTestForm" />
         <activity android:name=".PatientMore" />
         <activity android:name=".SymptomLog" />
