@@ -18,7 +18,7 @@ public class PatientMore extends AppCompatActivity {
         buttonHome = (Button) findViewById(R.id.buttonHome);
         buttonBookTest = (Button) findViewById(R.id.buttonBookTest);
         buttonTestResults = (Button) findViewById(R.id.buttonTestResults);
-        buttonSymptoms = (Button) findViewById(R.id.buttonSymptoms);
+        buttonSymptoms = (Button) findViewById(R.id.buttonSymptomLog);
         buttonMore = (Button) findViewById(R.id.buttonMore);
         buttonAddContact = (Button) findViewById(R.id.buttonAddContact);
         buttonUpcomingTestsPatient = (Button) findViewById(R.id.buttonUpcomingTestsPatient);
@@ -76,7 +76,7 @@ public class PatientMore extends AppCompatActivity {
         buttonSendMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openContactDoctorForm();
+                openSendDoctorMessage();
             }
         });
 
@@ -123,8 +123,8 @@ public class PatientMore extends AppCompatActivity {
         startActivity(intent);
 
     }
-    public void openContactDoctorForm(){
-        Intent intent = new Intent(this, ContactDoctorForm.class);
+    public void openSendDoctorMessage(){
+        Intent intent = new Intent(this, SendDoctorMessage.class);
         startActivity(intent);
 
     }

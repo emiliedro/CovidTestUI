@@ -47,7 +47,7 @@
                 android:textColor="@android:color/black" />
 
             <Button
-                android:id="@+id/buttonSymptoms"
+                android:id="@+id/buttonSymptomLog"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
@@ -148,6 +148,7 @@
                             android:layout_height="20dp"
                             android:layout_weight="1"
                             android:text="Book Covid Test Now"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
                             android:textSize="16sp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -214,6 +215,7 @@
                             android:layout_height="20dp"
                             android:layout_weight="1"
                             android:text="Book Antibody Test Now"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
                             android:textSize="18sp" />
                     </LinearLayout>
                 </LinearLayout>

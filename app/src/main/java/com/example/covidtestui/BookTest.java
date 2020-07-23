@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class BookTest extends AppCompatActivity {
-    Button buttonHome, buttonBookTest, buttonTestResults, buttonSymptoms, buttonMore, buttonBookCovidTest, buttonBookAntibodyTest;
+    Button buttonHome, buttonBookTest, buttonTestResults, buttonSymptomLog, buttonMore, buttonBookCovidTest, buttonBookAntibodyTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class BookTest extends AppCompatActivity {
         buttonHome = (Button) findViewById(R.id.buttonHome);
         buttonBookTest = (Button) findViewById(R.id.buttonBookTest);
         buttonTestResults = (Button) findViewById(R.id.buttonTestResults);
-        buttonSymptoms = (Button) findViewById(R.id.buttonSymptoms);
+        buttonSymptomLog = (Button) findViewById(R.id.buttonSymptomLog);
         buttonMore = (Button) findViewById(R.id.buttonMore);
         buttonBookCovidTest = (Button) findViewById(R.id.buttonBookCovidTest);
         buttonBookAntibodyTest = (Button) findViewById(R.id.buttonBookAntibodyTest);
@@ -43,7 +43,7 @@ public class BookTest extends AppCompatActivity {
             }
         });
 
-        buttonSymptoms.setOnClickListener(new View.OnClickListener() {
+        buttonSymptomLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openSymptomLog();

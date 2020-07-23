@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class PatientHome extends AppCompatActivity {
-    Button buttonHome, buttonBookTest, buttonTestResults, buttonSymptoms, buttonMore, buttonBookNowHome, buttonViewResultsHome, buttonLogSymptomsHome;
+    Button buttonHome, buttonBookTest, buttonTestResults, buttonSymptomLog, buttonMore, buttonBookNowHome, buttonViewResultsHome, buttonLogSymptomsHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class PatientHome extends AppCompatActivity {
         buttonHome = (Button) findViewById(R.id.buttonHome);
         buttonBookTest = (Button) findViewById(R.id.buttonBookTest);
         buttonTestResults = (Button) findViewById(R.id.buttonTestResults);
-        buttonSymptoms = (Button) findViewById(R.id.buttonSymptoms);
+        buttonSymptomLog = (Button) findViewById(R.id.buttonSymptomLog);
         buttonMore = (Button) findViewById(R.id.buttonMore);
         buttonBookNowHome = (Button) findViewById(R.id.buttonBookNowHome);
         buttonViewResultsHome = (Button) findViewById(R.id.buttonViewResultsHome);
@@ -45,7 +45,7 @@ public class PatientHome extends AppCompatActivity {
             }
         });
 
-        buttonSymptoms.setOnClickListener(new View.OnClickListener() {
+        buttonSymptomLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openSymptomLog();

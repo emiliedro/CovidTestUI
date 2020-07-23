@@ -52,7 +52,7 @@ public class UpcomingTestsDoctor extends AppCompatActivity {
         buttonNotifs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openPatientNotifications();
+                openNotifications();
             }
         });
 
@@ -82,8 +82,8 @@ public class UpcomingTestsDoctor extends AppCompatActivity {
 
     }
 
-    public void openPatientNotifications(){
-        Intent intent = new Intent(this, PatientNotifications.class);
+    public void openNotifications(){
+        Intent intent = new Intent(this, Notifications.class);
         startActivity(intent);
 
     }

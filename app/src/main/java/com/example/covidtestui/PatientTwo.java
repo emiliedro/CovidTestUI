@@ -7,17 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class PatientOneInfo extends AppCompatActivity {
+public class PatientTwo extends AppCompatActivity {
 
-    Button buttonPatientBack, buttonPatientAddTest;
+    Button buttonPatientBack, buttonPatientAddTestResults;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_patient_one_info);
+        setContentView(R.layout.activity_patient_two);
 
-        buttonPatientAddTest = (Button) findViewById(R.id.buttonPatientAddTest);
         buttonPatientBack = (Button) findViewById(R.id.buttonPatientBack);
+
+        buttonPatientAddTestResults = (Button) findViewById(R.id.buttonPatientAddTestResults);
 
         buttonPatientBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,14 +27,14 @@ public class PatientOneInfo extends AppCompatActivity {
             }
         });
 
-        buttonPatientAddTest.setOnClickListener(new View.OnClickListener() {
+        buttonPatientAddTestResults.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openAddSpecificTestResultsForm();
             }
         });
-    }
 
+    }
 
     public void openViewPatients(){
         Intent intent = new Intent(this, ViewPatients.class);
@@ -41,10 +42,8 @@ public class PatientOneInfo extends AppCompatActivity {
 
     }
 
-
     public void openAddSpecificTestResultsForm(){
-        Intent intent = new Intent(this, AddSpecificTestResultsForm.class);
+        Intent intent = new Intent (this, AddSpecificTestResultsForm.class);
         startActivity(intent);
-
     }
 }

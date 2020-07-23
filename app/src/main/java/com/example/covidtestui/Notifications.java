@@ -3,27 +3,26 @@ package com.example.covidtestui;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Binder;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class PatientNotifications extends AppCompatActivity {
+public class Notifications extends AppCompatActivity {
 
-    Button buttonDoctorHome, buttonAddTestResults, buttonPatients, buttonDoctorUpcomingTests, buttonNotifs, buttonPatientOneViewProfile, buttonPatientTwoViewProfile;
+    Button buttonDoctorHome, buttonAddTestResults, buttonPatients, buttonDoctorUpcomingTests, buttonNotifs, buttonPatientOne, buttonPatientTwo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_patient_notifications);
+        setContentView(R.layout.activity_notifications);
 
         buttonDoctorHome = (Button) findViewById(R.id.buttonDoctorHome);
         buttonAddTestResults = (Button) findViewById(R.id.buttonAddTestResults);
         buttonPatients = (Button) findViewById(R.id.buttonPatients);
         buttonDoctorUpcomingTests = (Button) findViewById(R.id.buttonDoctorUpcomingTests);
         buttonNotifs = (Button) findViewById(R.id.buttonNotifs);
-        buttonPatientOneViewProfile = (Button) findViewById(R.id.buttonPatientOneViewMore);
-        buttonPatientTwoViewProfile = (Button) findViewById(R.id.buttonPatientTwoViewMore);
+        buttonPatientOne = (Button) findViewById(R.id.buttonPatientOne);
+        buttonPatientTwo = (Button) findViewById(R.id.buttonPatientTwo);
 
         buttonDoctorHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,21 +55,21 @@ public class PatientNotifications extends AppCompatActivity {
         buttonNotifs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openPatientNotifications();
+                openNotifications();
             }
         });
 
-        buttonPatientOneViewProfile.setOnClickListener(new View.OnClickListener() {
+        buttonPatientOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openPatientOneInfo();
+                openPatientOne();
             }
         });
 
-        buttonPatientTwoViewProfile.setOnClickListener(new View.OnClickListener() {
+        buttonPatientTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openPatientTwoInfo();
+                openPatientTwo();
             }
         });
     }
@@ -99,21 +98,18 @@ public class PatientNotifications extends AppCompatActivity {
 
     }
 
-    public void openPatientNotifications(){
-        Intent intent = new Intent(this, PatientNotifications.class);
+    public void openNotifications(){
+        Intent intent = new Intent(this, Notifications.class);
         startActivity(intent);
-
     }
 
-    public void openPatientOneInfo(){
-        Intent intent = new Intent(this, PatientOneInfo.class);
+    public void openPatientOne(){
+        Intent intent = new Intent(this, PatientOne.class);
         startActivity(intent);
-
     }
 
-    public void openPatientTwoInfo(){
-        Intent intent = new Intent(this, PatientTwoInfo.class);
+    public void openPatientTwo(){
+        Intent intent = new Intent(this, PatientTwo.class);
         startActivity(intent);
-
     }
 }

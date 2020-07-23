@@ -55,21 +55,21 @@ public class ViewPatients extends AppCompatActivity {
         buttonNotifs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openPatientNotifications();
+                openNotifications();
             }
         });
 
         buttonPatientOneViewMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openPatientOneInfo();
+                openPatientOne();
             }
         });
 
         buttonPatientTwoViewMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openPatientTwoInfo();
+                openPatientTwo();
             }
         });
 
@@ -99,20 +99,20 @@ public class ViewPatients extends AppCompatActivity {
 
     }
 
-    public void openPatientNotifications(){
-        Intent intent = new Intent(this, PatientNotifications.class);
+    public void openNotifications(){
+        Intent intent = new Intent(this, Notifications.class);
         startActivity(intent);
 
     }
 
-    public void openPatientOneInfo(){
-        Intent intent = new Intent(this, PatientOneInfo.class);
+    public void openPatientOne(){
+        Intent intent = new Intent (this, PatientOne.class);
         startActivity(intent);
 
     }
 
-    public void openPatientTwoInfo(){
-        Intent intent = new Intent(this, PatientTwoInfo.class);
+    public void openPatientTwo(){
+        Intent intent = new Intent(this, PatientTwo.class);
         startActivity(intent);
 
     }

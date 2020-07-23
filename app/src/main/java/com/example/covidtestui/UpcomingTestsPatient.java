@@ -18,7 +18,7 @@ public class UpcomingTestsPatient extends AppCompatActivity {
         buttonHome = (Button) findViewById(R.id.buttonHome);
         buttonBookTest = (Button) findViewById(R.id.buttonBookTest);
         buttonTestResults = (Button) findViewById(R.id.buttonTestResults);
-        buttonSymptoms = (Button) findViewById(R.id.buttonSymptoms);
+        buttonSymptoms = (Button) findViewById(R.id.buttonSymptomLog);
         buttonMore = (Button) findViewById(R.id.buttonMore);
 
         buttonHome.setOnClickListener(new View.OnClickListener() {
