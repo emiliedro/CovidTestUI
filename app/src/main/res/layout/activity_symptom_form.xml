@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/Symptoms Log"
+            android:id="@+id/SymptomsLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Symptoms Log"

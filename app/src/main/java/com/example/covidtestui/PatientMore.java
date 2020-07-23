@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class PatientMore extends AppCompatActivity {
-    Button buttonHome, buttonBookTest, buttonTestResults, buttonSymptoms, buttonMore;
+    Button buttonHome, buttonBookTest, buttonTestResults, buttonSymptoms, buttonMore, buttonSendMessage, buttonUpcomingTestsPatient, buttonAddContact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,9 @@ public class PatientMore extends AppCompatActivity {
         buttonTestResults = (Button) findViewById(R.id.buttonTestResults);
         buttonSymptoms = (Button) findViewById(R.id.buttonSymptoms);
         buttonMore = (Button) findViewById(R.id.buttonMore);
+        buttonAddContact = (Button) findViewById(R.id.buttonAddContact);
+        buttonUpcomingTestsPatient = (Button) findViewById(R.id.buttonUpcomingTestsPatient);
+        buttonSendMessage = (Button) findViewById(R.id.buttonSendMessage);
 
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +58,29 @@ public class PatientMore extends AppCompatActivity {
                 openPatientMore();
             }
         });
+
+        buttonAddContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openContactTracingForm();
+            }
+        });
+
+        buttonUpcomingTestsPatient.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openUpcomingTestsPatient();
+            }
+        });
+
+        buttonSendMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openContactDoctorForm();
+            }
+        });
+
+
     }
 
     public void openPatientHome(){
@@ -82,6 +108,23 @@ public class PatientMore extends AppCompatActivity {
 
     public void openPatientMore(){
         Intent intent = new Intent(this, PatientMore.class);
+        startActivity(intent);
+
+    }
+
+    public void openContactTracingForm(){
+        Intent intent = new Intent(this, ContactTracingForm.class);
+        startActivity(intent);
+
+    }
+
+    public void openUpcomingTestsPatient(){
+        Intent intent = new Intent(this, UpcomingTestsPatient.class);
+        startActivity(intent);
+
+    }
+    public void openContactDoctorForm(){
+        Intent intent = new Intent(this, ContactDoctorForm.class);
         startActivity(intent);
 
     }
