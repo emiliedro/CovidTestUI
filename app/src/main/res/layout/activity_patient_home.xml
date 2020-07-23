@@ -27,7 +27,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <LinearLayout
-                android:id="@+id/Covid Test"
+                android:id="@+id/CovidTest"
                 android:layout_width="match_parent"
                 android:layout_height="148dp"
                 android:orientation="horizontal">
@@ -87,6 +87,17 @@
                 android:capitalize="characters"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
             <LinearLayout
                 android:id="@+id/TestResults"
                 android:layout_width="match_parent"
@@ -142,6 +153,17 @@
                 android:layout_height="wrap_content"
                 android:capitalize="characters"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:id="@+id/Symptoms"

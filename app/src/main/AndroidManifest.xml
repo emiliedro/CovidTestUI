@@ -9,14 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PatientMore"></activity>
+        <activity android:name=".CovidTestForm"></activity>
+        <activity android:name=".AntibodyTestForm" />
+        <activity android:name=".PatientMore" />
         <activity android:name=".SymptomLog" />
         <activity android:name=".TestResults" />
         <activity android:name=".BookTest" />
         <activity android:name=".PatientHome" />
         <activity android:name=".PatientLogin" />
         <activity android:name=".DoctorLogin" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

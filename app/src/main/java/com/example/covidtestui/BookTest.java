@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class BookTest extends AppCompatActivity {
-    Button buttonHome, buttonBookTest, buttonTestResults, buttonSymptoms, buttonMore;
+    Button buttonHome, buttonBookTest, buttonTestResults, buttonSymptoms, buttonMore, buttonBookCovidTest, buttonBookAntibodyTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,8 @@ public class BookTest extends AppCompatActivity {
         buttonTestResults = (Button) findViewById(R.id.buttonTestResults);
         buttonSymptoms = (Button) findViewById(R.id.buttonSymptoms);
         buttonMore = (Button) findViewById(R.id.buttonMore);
+        buttonBookCovidTest = (Button) findViewById(R.id.buttonBookCovidTest);
+        buttonBookAntibodyTest = (Button) findViewById(R.id.buttonBookAntibodyTest);
 
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +56,20 @@ public class BookTest extends AppCompatActivity {
                 openPatientMore();
             }
         });
+
+        buttonBookAntibodyTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openAntibodyTestForm();
+            }
+        });
+
+        buttonBookCovidTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openCovidTestForm();
+            }
+        });
     }
 
     public void openPatientHome(){
@@ -81,6 +97,18 @@ public class BookTest extends AppCompatActivity {
 
     public void openPatientMore(){
         Intent intent = new Intent(this, PatientMore.class);
+        startActivity(intent);
+
+    }
+
+    public void openCovidTestForm(){
+        Intent intent = new Intent(this, CovidTestForm.class);
+        startActivity(intent);
+
+    }
+
+    public void openAntibodyTestForm(){
+        Intent intent = new Intent(this, AntibodyTestForm.class);
         startActivity(intent);
 
     }
