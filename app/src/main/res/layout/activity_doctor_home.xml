@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorHome">
+
+    <LinearLayout
+        android:id="@+id/PatientNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_marginTop="700dp"
+        android:keepScreenOn="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonDoctorHome"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Home" />
+
+            <Button
+                android:id="@+id/buttonAddTestResults"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1000"
+                android:text="Add Test Results" />
+
+            <Button
+                android:id="@+id/buttonPatients"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Patients" />
+
+            <Button
+                android:id="@+id/buttonDoctorUpcomingTests"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1000"
+                android:text="Upcoming Tests" />
+
+            <Button
+                android:id="@+id/buttonNotifs"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="Notifs" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="625dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="69dp"
+        android:layout_alignParentLeft="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView81"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/covid_results" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView88"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="     Add Test Results"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                    <TextView
+                        android:id="@+id/textView89"
+                        android:layout_width="225dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Quickly add test results for any patient by clicking below." />
+
+                    <Button
+                        android:id="@+id/buttonAddNowHome"
+                        android:layout_width="225dp"
+                        android:layout_height="wrap_content"
+                        android:text="Add Now"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        tools:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView82"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/divider12"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/textView83"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/covid_patients" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView86"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="            Patients"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView87"
+                        android:layout_width="225dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="To seee your patient list, or to search a patients by name, click below." />
+
+                    <Button
+                        android:id="@+id/buttonViewPatientsHome"
+                        android:layout_width="225dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="View Patients"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView84"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/divider13"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/textView85"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/covid_calendar" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView90"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="     Upcoming Tests"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView91"
+                        android:layout_width="225dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="See all upcoming tests you have scheduled." />
+
+                    <Button
+                        android:id="@+id/buttonViewUpcomingTestsHome"
+                        android:layout_width="225dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="View Upcoming Tests"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+    </LinearLayout>
+</RelativeLayout>
