@@ -3,13 +3,14 @@ package com.example.covidtestui;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Binder;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class PatientNotifications extends AppCompatActivity {
 
-    Button buttonDoctorHome, buttonAddTestResults, buttonPatients, buttonDoctorUpcomingTests, buttonNotifs;
+    Button buttonDoctorHome, buttonAddTestResults, buttonPatients, buttonDoctorUpcomingTests, buttonNotifs, buttonPatientOneViewProfile, buttonPatientTwoViewProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,8 @@ public class PatientNotifications extends AppCompatActivity {
         buttonPatients = (Button) findViewById(R.id.buttonPatients);
         buttonDoctorUpcomingTests = (Button) findViewById(R.id.buttonDoctorUpcomingTests);
         buttonNotifs = (Button) findViewById(R.id.buttonNotifs);
+        buttonPatientOneViewProfile = (Button) findViewById(R.id.buttonPatientOneViewMore);
+        buttonPatientTwoViewProfile = (Button) findViewById(R.id.buttonPatientTwoViewMore);
 
         buttonDoctorHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +60,19 @@ public class PatientNotifications extends AppCompatActivity {
             }
         });
 
+        buttonPatientOneViewProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openPatientOneInfo();
+            }
+        });
+
+        buttonPatientTwoViewProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openPatientTwoInfo();
+            }
+        });
     }
 
     public void openDoctorHome(){
@@ -85,6 +101,18 @@ public class PatientNotifications extends AppCompatActivity {
 
     public void openPatientNotifications(){
         Intent intent = new Intent(this, PatientNotifications.class);
+        startActivity(intent);
+
+    }
+
+    public void openPatientOneInfo(){
+        Intent intent = new Intent(this, PatientOneInfo.class);
+        startActivity(intent);
+
+    }
+
+    public void openPatientTwoInfo(){
+        Intent intent = new Intent(this, PatientTwoInfo.class);
         startActivity(intent);
 
     }

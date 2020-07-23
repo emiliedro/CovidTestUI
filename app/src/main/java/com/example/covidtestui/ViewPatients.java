@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class ViewPatients extends AppCompatActivity {
 
-    Button buttonDoctorHome, buttonAddTestResults, buttonPatients, buttonDoctorUpcomingTests, buttonNotifs;
+    Button buttonDoctorHome, buttonAddTestResults, buttonPatients, buttonDoctorUpcomingTests, buttonNotifs, buttonPatientOneViewMore, buttonPatientTwoViewMore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,8 @@ public class ViewPatients extends AppCompatActivity {
         buttonPatients = (Button) findViewById(R.id.buttonPatients);
         buttonDoctorUpcomingTests = (Button) findViewById(R.id.buttonDoctorUpcomingTests);
         buttonNotifs = (Button) findViewById(R.id.buttonNotifs);
+        buttonPatientOneViewMore = (Button) findViewById(R.id.buttonPatientOneViewMore);
+        buttonPatientTwoViewMore = (Button) findViewById(R.id.buttonPatientTwoViewMore);
 
         buttonDoctorHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +59,20 @@ public class ViewPatients extends AppCompatActivity {
             }
         });
 
+        buttonPatientOneViewMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openPatientOneInfo();
+            }
+        });
+
+        buttonPatientTwoViewMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openPatientTwoInfo();
+            }
+        });
+
     }
 
     public void openDoctorHome(){
@@ -85,6 +101,18 @@ public class ViewPatients extends AppCompatActivity {
 
     public void openPatientNotifications(){
         Intent intent = new Intent(this, PatientNotifications.class);
+        startActivity(intent);
+
+    }
+
+    public void openPatientOneInfo(){
+        Intent intent = new Intent(this, PatientOneInfo.class);
+        startActivity(intent);
+
+    }
+
+    public void openPatientTwoInfo(){
+        Intent intent = new Intent(this, PatientTwoInfo.class);
         startActivity(intent);
 
     }
