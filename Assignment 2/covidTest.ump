@@ -1,0 +1,141 @@
+class Patient
+{
+  name;
+address;
+phoneNumber;
+Integer healthNumber;
+1 -- * Test;
+  * -- * PatientContact;
+  1 -- * PatientSymptom;
+}
+
+class PatientContact
+{
+  contactDate;
+  contactLocation;
+  name;
+  phoneNumber;
+  address;
+}
+
+class Test
+{
+  date;
+  time;
+  location;
+  processingLab;
+  processingDate;
+  outcome;
+  * -- 1 TestType;
+}
+
+class TestType
+{
+  type;
+  manufacturer;
+  version;
+}
+
+class PatientSymptom
+{
+  startDate;
+  endDate;
+  severity;
+  symptomType;
+}
+
+class Patient {
+  
+  public static void main( String[] args ) {
+    //I am using default data points, however the real program would ask the
+    //user to enter the health number of the patient they are looking for and
+    //this system would display the data for the given patient 
+
+    String DEFAULT_NAME = "Jane Doe";
+    String DEFAULT_ADDRESS = "123 Corona Avenue";
+    String DEFAULT_PHONE_NUMBER = "613-728-6876";
+    int DEFAULT_HEALTH_NUMBER = 123456;
+
+    Patient person1 = new Patient(DEFAULT_NAME, DEFAULT_ADDRESS, DEFAULT_PHONE_NUMBER, DEFAULT_HEALTH_NUMBER);
+
+    String DEFAULT_TYPE = "Virus";
+    String DEFAULT_MANUFACTURER = "Spartan Bioscience";
+    String DEFAULT_VERSION = "1";
+
+    TestType type = new TestType (DEFAULT_TYPE, DEFAULT_MANUFACTURER, DEFAULT_VERSION);
+
+    String DEFAULT_DATE1 = "2020-06-06";
+    String DEFAULT_DATE2 = "2020-06-19";
+      String DEFAULT_TIME1 = "04:01:19";
+      String DEFAULT_TIME2= "11:11:11";
+      String DEFAULT_LOCATION = "Brewer Park, Ottawa, Ontario";
+      String DEFAULT_PROCESSING_LAB = "Ontario Public Health Labs";
+    String DEFAULT_PROCESSING_DATE = "2020-06-07";
+      String DEFAULT_OUTCOME1 = "Positive";
+      String DEFAULT_OUTCOME2 = "Negative";
+
+      Test test1 = new Test(DEFAULT_DATE1, DEFAULT_TIME1, DEFAULT_LOCATION, DEFAULT_PROCESSING_LAB, DEFAULT_PROCESSING_DATE, DEFAULT_OUTCOME1, type, person1);
+
+      Test test2 = new Test(DEFAULT_DATE2, DEFAULT_TIME2, DEFAULT_LOCATION, DEFAULT_PROCESSING_LAB, DEFAULT_PROCESSING_DATE, DEFAULT_OUTCOME2, type, person1);
+      
+      
+      person1.addTest(test1);
+      person1.addTest(test2);
+
+    
+    System.out.println();
+    System.out.println("***************************************************************************************************");
+    System.out.println("Patients Information:");
+    System.out.println("Name : " + person1.getName());
+    System.out.println("Address : " + person1.getAddress());
+    System.out.println("Phone Number : " + person1.getPhoneNumber());
+    System.out.println("Health Number : " + person1.getHealthNumber());
+    System.out.println("***************************************************************************************************");
+
+    System.out.println();
+    System.out.println("***************************************************************************************************");
+    System.out.println("Tests Taken by Patient:");
+    System.out.println();
+    for (int i = 0; i < person1.numberOfTests(); i++){
+      System.out.println("Test # " + (i+1));
+      System.out.println(person1.getTest(i));
+      System.out.println();
+    }
+    System.out.println("***************************************************************************************************");
+
+  }
+}//$?[End_of_model]$?
+
+namespace -;
+
+
+class Patient
+{
+  position 175 205 169 108;
+  position.association Patient__Test 45,0 178,122;
+  position.association Patient__PatientContactList 1,41 129,0;
+  position.association Patient__PatientSymptoms 109,41 1,0;
+  position.association Patient__PatientContact 167,108 91,0;
+  position.association Patient__PatientSymptom 32,108 120,0;
+}
+
+class Test
+{
+  position 22 33 177 125;
+  position.association Test__TestType 178,54 0,63;
+}
+
+class TestType
+{
+  position 283 47 136 90;
+}
+
+class PatientContact
+{
+  position 290 337 180 107;
+}
+
+class PatientSymptom
+{
+  position 104 352 164 107;
+}
